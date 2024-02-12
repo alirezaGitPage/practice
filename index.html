@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table,
+        th,
+        td{
+            border-collapse: collapse;
+            padding: 15px;
+        }
+        tbody tr{
+            border-bottom: 1px solid #ccc;
+        }
+        tbody tr:last-child{
+            border-bottom: 3px solid #5bbca9;
+        }
+        thead {
+            background-color: #5bbca9;
+            color: #fff;
+        }
+        thead tr:first-child{
+            background-color: #2e5d54;
+            color: #fff;
+        }
+        thead tr:first-child th{
+            border-top-left-radius: 6px;
+        }
+        thead tr:first-child th{
+            border-top-right-radius: 6px;
+        }
+        /* thead tr th:first-child{
+            border-top-left-radius: 5px;
+        }
+        thead tr th:last-child{
+            border-top-right-radius: 5px;
+        } */
+        tbody tr:nth-child(even){
+            background-color: #eee;
+            color: #5bbca9;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th colspan="4">User Data</th>
+            </tr>
+            <tr>
+                <th>Rank</th>
+                <th>Name</th>
+                <th>Points</th>
+                <th>Team</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Domenic</td>
+                <td>88,110</td>
+                <td>dcode</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Sally</td>
+                <td>72,400</td>
+                <td>Students</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Nick</td>
+                <td>52,300</td>
+                <td>dcode</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
