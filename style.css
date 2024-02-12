@@ -1,0 +1,59 @@
+/* Table Practice */
+table,
+th,
+td{
+    border-collapse: collapse;
+    padding: 15px;
+}
+tbody tr{
+    border-bottom: 1px solid #ccc;
+}
+tbody tr:last-child{
+    border-bottom: 3px solid #5bbca9;
+}
+thead {
+    background-color: #5bbca9;
+    color: #fff;
+}
+thead tr:first-child{
+    background-color: #2e5d54;
+    color: #fff;
+}
+thead tr:first-child th{
+    border-top-left-radius: 6px;
+}
+thead tr:first-child th{
+    border-top-right-radius: 6px;
+}
+/* thead tr th:first-child{
+    border-top-left-radius: 5px;
+}
+thead tr th:last-child{
+    border-top-right-radius: 5px;
+} */
+tbody tr:nth-child(even){
+    background-color: #eee;
+    color: #5bbca9;
+}
+
+/* Selector Practice */
+
+/* This way effect on all p in products_1 */
+.products_1 p{
+    color: red;
+}
+
+/* This way effect on all p which is directly child of products_2 */
+.products_2 > p{
+    color: red;
+}
+
+/* This way effect on all p which is a sibling of products_3 */
+.products_3 ~ p{
+    color: red;
+}
+
+/* This way effect on first p which is a sibling of products_4 */
+.products_4 + p{
+    color: red;
+}
