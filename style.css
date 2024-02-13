@@ -35,6 +35,9 @@ tbody tr:nth-child(even){
     background-color: #eee;
     color: #5bbca9;
 }
+tbody tr:hover{
+    background-color: #2e5d54;
+}
 
 /* Selector Practice */
 
