@@ -57,3 +57,92 @@ tbody tr:nth-child(even){
 .products_4 + p{
     color: red;
 }
+
+/* attribute selector */
+a[target]{
+    color: green;
+}
+a[target="_blank"]{
+    color: yellowgreen;
+}
+
+/* contains -->   *=  */
+a[href*="fronthooks"]{
+    font-size: 40px;
+}
+/* start with -->  ^= */
+a[href^="https"]{
+    font-weight: 900;
+}
+/* ends with -->  $=  */
+a[href$=".ir"]{
+    font-style: italic;
+}
+
+/* pseudo classes
+    :first-child
+    :last-child
+    :first-of-type --> first child of each type
+    :last-of-type  --> last child of each type
+    :nth-child(even)
+    :nth-child(2n)
+    :nth-child(odd)
+    :nth-child(2n+1)
+    :nth-child(3n)
+
+    :hover
+    :visited
+    :link
+    :active
+    :focus  --> when the link select by tab key
+*/
+
+.pseudo :first-child{
+    color: red;
+}
+.pseudo :last-child{
+    background-color: #2e5d54;
+}
+.pseudo :first-of-type{
+    font-size: 40px;
+}
+.pseudo :last-of-type{
+    font-style: italic;
+}
+.pseudo :nth-child(3n){
+    border: 3px solid salmon;
+}
+.pseudo a:link{
+    color: yellow;
+}
+.pseudo a:active{
+    color: red;
+}
+.pseudo a:hover{
+    background-color: yellowgreen;
+}
+.pseudo a:visited{
+    color: purple;
+}
+
+/* pseudo element
+    ::first-letter
+    ::first-line
+    ::after
+    ::before
+*/
+
+.pseudo :last-child::first-letter{
+    font-size: 280px;
+}
+.pseudo p:nth-child(2n)::first-line{
+    font-size: 140px;
+}
+.pseudo :last-child::before{
+    content: "...";
+}
+.pseudo :last-child::after{
+    content: "...";
+    font-size: 35px;
+    color: #5bbca9;
+}
