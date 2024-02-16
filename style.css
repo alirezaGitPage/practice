@@ -149,3 +149,58 @@ a[href$=".ir"]{
     font-size: 35px;
     color: #5bbca9;
 }
+
+/* selector specificity
+    tag name is 001
+    class name is 010
+    id name is 100
+    greater specificity show higher priority, you can break this rull by using !important key word but it's not recomended
+    if an element has two classes its better to select it like this : ".class1.class2"
+    its better to shorten your selectors, just using class and id, not long selectors like : "html body h2.class1 #id1" it's not recomended
+*/
+
+/* inheritance
+    properties which is about colors and fonts are usually inherited from parent, if you want child doesn't affect by inheritance, simply set value of the inhrited property to initial
+*/
+
+/* colors:
+    rgba(red, green, blue, opacity)
+        red, green, blue : 0 - 255
+        opacity : 0 - 1
+    hsla(hue, saturation, lightness, opacity)
+        hue is a circle of colors : 0 - 360
+        saturation is color intensity : 0 - 100%
+        lightness is brightness : 0 - 100%
+    hex code
+*/
+
+/* gradient
+    linear-gradient(direction, color1 instensity, color2 intensity)
+    we can have more than 2 colors, intensity is not necessery
+        direction : to top , to left, to right, to top left , ...
+                    0deg, 45deg, 90deg , ...
+        intensity : 0 - 100%
+    radial-gradient(shape, color1 intensity, color2 intensity)
+        shape : circle , ...
+    
+    after all its better to use cssgradient.io website
+*/
+
+/* border
+    border : 1px solid black;
+    border-width: 10px 20px 30px 40px;
+*/
+.messageBox{
+    width: 300px;
+    height: 100px;
+    background-color: #babaff;
+    border-left: 5px solid #50e22b;
+    border-radius: 10px;
+}
+.box{
+    width: 100px;
+    height: 100px;
+    background-color: #ebebf1;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+}
