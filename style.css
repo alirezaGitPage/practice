@@ -204,3 +204,17 @@ a[href$=".ir"]{
     border: 2px solid #ccc;
     border-radius: 10px;
 }
+
+/* shadow --->  box-shadow   |   text-shadow
+    (offset-X  offset-Y  blur spread  color)  --->   spread is not recommended a lot
+ */
+.box.boxshadow{
+    background-color: gold;
+    border: 0;
+    box-shadow: 0 0 30px rgba(0,0,0,0.3);
+}
+.boxshadow > h2{
+    color: #444;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.15);
+    text-align: center;
+}
