@@ -96,3 +96,38 @@ function calculateDiscount(totalPrice){
     return (totalPrice * discount) / 100;
 }
 console.log(calculateDiscount(500));
+
+// #11 object challenge
+const course = {
+    title: "Next.js",
+    price: 100,
+    discount: 30,
+    students: ["Ali", "Vahid", "Saheb"],
+    isFree: false,
+    category: {
+        id: 1,
+        englishTitle: "Frontend",
+        title: "Front-end",
+    },
+    calcOffPrice: function(){
+        this.offPrice = this.price * (1 - this.discount/100);
+    }
+} ;
+course.calcOffPrice();
+console.log(course.offPrice);
+console.log(course.offPrice);
+console.log(course.offPrice);
+console.log(course.offPrice);
+
+// #12 factory function challenge
+function createCourse(title,price,discount){
+    return{
+    title,
+    price,
+    discount,
+    calcOffPrice(){
+        return price * (1 - discount/100);
+    },
+    };
+}
+console.log(createCourse("React.js",200,20).calcOffPrice());
