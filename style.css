@@ -218,3 +218,9 @@ a[href$=".ir"]{
     text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.15);
     text-align: center;
 }
+
+/* margin
+    about two block level element, we have margin colapsing, means that margin bottom of el1 collapse with margin top of el2
+    box-sizing by default is content-box which we change it to border-box
+*/
+/* inline element don't get width and height, you can use inline-block display */
