@@ -131,3 +131,39 @@ function createCourse(title,price,discount){
     };
 }
 console.log(createCourse("React.js",200,20).calcOffPrice());
+
+// #13 constructor function challenge
+function CreateCourse(title,price,discount){
+    this.title = title;
+    this.price = price;
+    this.discount = discount;
+    this.calcOffPrice = function(){
+        return price * (1 - discount/100);
+    };
+}
+
+const course1 = new CreateCourse("React.js", 300, 30);
+console.log(course1.title);
+console.log(course1.calcOffPrice());
+console.log(course1.constructor); // This will show the constructor of the instanced object
+console.log(course1 instanceof CreateCourse) // this is a question, Is course1 an instance of CreateCourse func? true.
+
+// #14 build-in constructor challenge
+// by this challenge we comprehense that everything in js is an object
+const numLit = 200;
+const numObj = new Number(200);
+console.log(numLit, typeof(numLit));
+console.log(numObj, typeof(numObj));
+
+const boolLit = true;
+const boolObj = new Boolean(true);
+console.log(boolLit, typeof(boolLit));
+console.log(boolObj, typeof(boolObj));
+
+const arrLit = ["Ali", 200, false, 1.25];
+console.log(arrLit, typeof(arrLit));
+const arrObj = new Array(["Ali", 200, false, 1.25]);
+console.log(arrObj, typeof(arrObj));
+console.log(arrObj.constructor);
+console.log(arrObj instanceof Array);
+console.log(numObj instanceof Array);
