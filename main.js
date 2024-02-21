@@ -167,3 +167,29 @@ console.log(arrObj, typeof(arrObj));
 console.log(arrObj.constructor);
 console.log(arrObj instanceof Array);
 console.log(numObj instanceof Array);
+
+// #15 primitive vs refrence data type
+// Primitive
+const data = "Ali";
+let primitiveCopyData = data;
+primitiveCopyData = "Alireza";
+console.log(data, primitiveCopyData);
+// refrence
+const refrenceUser = {
+    name : "ali",
+    age : 29,
+    firends : ["mahsa","hadad"],
+};
+const copiedRefrenceUser = refrenceUser;
+copiedRefrenceUser.name = "alireza";
+console.log(refrenceUser, copiedRefrenceUser);
+// shallow copy
+const shallowCopiedRefrenceUser = Object.assign({},refrenceUser);
+shallowCopiedRefrenceUser.name = "fatahi";
+shallowCopiedRefrenceUser.firends.push("Shahin");
+console.log(refrenceUser, shallowCopiedRefrenceUser);
+// deep copy
+const deepCopiedRefrenceUser = JSON.parse(JSON.stringify(refrenceUser));
+deepCopiedRefrenceUser.name = "alifatahi";
+deepCopiedRefrenceUser.firends.push("Shahram");
+console.log(refrenceUser, deepCopiedRefrenceUser);
