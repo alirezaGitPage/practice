@@ -113,6 +113,7 @@ const course = {
         this.offPrice = this.price * (1 - this.discount/100);
     }
 } ;
+
 course.calcOffPrice();
 console.log(course.offPrice);
 console.log(course.offPrice);
@@ -193,3 +194,28 @@ const deepCopiedRefrenceUser = JSON.parse(JSON.stringify(refrenceUser));
 deepCopiedRefrenceUser.name = "alifatahi";
 deepCopiedRefrenceUser.firends.push("Shahram");
 console.log(refrenceUser, deepCopiedRefrenceUser);
+
+// #destructuring
+const newCourse = {
+    title: "Next.js",
+    price: 100,
+    discount: 30,
+    students: ["Ali", "Vahid", "Saheb"],
+    isFree: false,
+    category: {
+        id: 1,
+        englishTitle: "Frontend",
+        title: "Front-end",
+    },
+    calcOffPrice: function(){
+        this.offPrice = this.price * (1 - this.discount/100);
+    },
+    showWelcomeMsg({name, email = "-", phoneNumber = "-"}){
+        console.log("Welcome " + name + " with email " + email + " and phone number " + phoneNumber);
+    }
+} ;
+newCourse.showWelcomeMsg({
+    email : "afatahi74@yahoo.com",
+    phoneNumber : "09380464481",
+    name : "Alireza",
+});
